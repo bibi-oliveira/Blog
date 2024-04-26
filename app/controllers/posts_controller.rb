@@ -24,6 +24,8 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    # quando estiver cadastrado/logado já vai adicionar o user_id ao post
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
