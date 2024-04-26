@@ -11,7 +11,7 @@
 
 <%= render "comments/form",
     post: @post,
-    comment: @post.comments.build
+    comment: @post.comments.build,
     submit_label: "Reply" %>
 
   <% @comments.each do |comment| %>
